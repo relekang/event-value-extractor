@@ -1,0 +1,11 @@
+setup_tasks:
+ - npm install
+
+tasks:
+ - npm run coverage
+ - npm run lint
+ - npm run coverage-report
+
+coverage:
+  path: coverage/cobertura-coverage.xml
+  parser: cobertura
