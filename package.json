@@ -1,7 +1,6 @@
 {
   "name": "event-value-extractor",
   "description": "Extract value from change events",
-  "version": "1.0.0",
   "main": "./lib/index.js",
   "scripts": {
     "prepublish": "babel index.js --out-dir lib",
