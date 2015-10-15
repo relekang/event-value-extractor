@@ -1,4 +1,4 @@
-# event-value-extractor ![Build status][build-badge] ![Coverage status][coverage-badge]
+# event-value-extractor [![Build status][build-badge]][last-build] [![Coverage status][coverage-badge]][last-build]
 
 
 ## Installation
@@ -41,3 +41,4 @@ MIT © Rolf Erik Lekang
 
 [build-badge]: https://ci.frigg.io/relekang/event-value-extractor.svg
 [coverage-badge]: https://ci.frigg.io/relekang/event-value-extractor/coverage.svg
+[last-build]: https://ci.frigg.io/relekang/event-value-extractor/last
