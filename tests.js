@@ -10,8 +10,8 @@ const {expect} = chai;
 
 const testValueExtraction = (extractor, value, outValue) => {
   const spy = sinon.spy();
-  extractor(spy)({target: {value: value}});
-  expect(spy).to.have.been.calledWith(outValue || value);
+  extractor(spy)({target: {name: 'fieldName', value: value}});
+  expect(spy).to.have.been.calledWith('fieldName', outValue || value);
 };
 
 describe('value(func, parser, parserArguments)', () => {

@@ -23,11 +23,11 @@ React.createClass({
 ```
 
 #### `.value(func, parser, parserArguments)`
-This will return a function that extracts `arguments[0].target.value`
-and calls `func` with that value. If parser is specified it will be
-called with the value as first argument and the arguments in
-parserArguments(must be one value or a list of values) as the
-next parameters.
+This will return a function that extracts `arguments[0].target.name`
+and `arguments[0].target.value`, which is used as arguments when `func`
+gets called. If parser is specified it will be called with the value
+as first argument and the arguments in parserArguments(must be one
+value or a list of values) as the next parameters.
 
 #### `.intValue(func)`
 This is a shortcut for `value(func, parseInt, 10);`

@@ -1,10 +1,9 @@
 export function value(func, parser, parserArgs) {
   return ({target}) => {
-    const _value = target.value;
     if (parser) {
-      return func(parser.apply(this, [_value].concat(parserArgs)));
+      return func(target.name, parser.apply(this, [target.value].concat(parserArgs)));
     }
-    return func(_value);
+    return func(target.name, target.value);
   };
 }
 
