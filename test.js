@@ -15,6 +15,13 @@ test('value should call func with the value in the target object', t => {
   testValueExtraction(t, eve.value, 'hi there')
 })
 
+test('value should call func with undefined if target is undefined', t => {
+  const spy = sinon.spy()
+  eve.value(spy)(undefined)
+  t.ok(spy.called)
+  t.same(spy.args[0], [undefined, undefined])
+})
+
 test('intValue(func) should call func with an parsed int of the value in the target object', t => {
   testValueExtraction(t, eve.intValue, '42', 42)
   testValueExtraction(t, eve.intValue, '3.14', 3)
