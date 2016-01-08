@@ -35,6 +35,13 @@ This is a shortcut for `value(func, parseInt, 10);`
 #### `.floatValue(func)`
 This is a shortcut for `value(func, parseFloat, 10);`
 
+#### `.boolValue(func)`
+This is an extractor which will convert the following:
+```
+'true' or '1' or 1 => true
+'false' or '0' or 0 => false
+```
+
 ----------------------
 
 MIT © Rolf Erik Lekang
