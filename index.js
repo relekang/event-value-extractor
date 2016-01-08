@@ -14,3 +14,14 @@ export function intValue(func) {
 export function floatValue(func) {
   return value(func, parseFloat, 10)
 }
+
+export function boolValue(func) {
+  return value(func, val => {
+    if (val === 'true' || val === '1' || val === 1) {
+      return true
+    }
+    if (val === 'false' || val === '0' || val === 0) {
+      return false
+    }
+  })
+}
