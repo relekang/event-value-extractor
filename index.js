@@ -1,5 +1,10 @@
 export function value(func, parser, parserArgs) {
-  return ({target}) => {
+  return (event) => {
+    if (!event || !event.target) {
+      return func(undefined, undefined)
+    }
+
+    const {target} = event
     if (parser) {
       return func(target.name, parser.apply(this, [target.value].concat(parserArgs)))
     }
